@@ -1,0 +1,79 @@
+#form1{
+    width: 70%;
+    margin: auto;
+    padding: 90px 0px;
+    margin-top: 50px;
+}
+
+
+button {
+    margin: 5px;
+}
+
+.switchh {
+    margin:auto
+
+}
+
+.cont{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    top: 70px;
+}
+
+.card {
+    width: 24rem;
+    margin: 20px;
+    display: inline-block
+
+  }
+
+  .card a{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+
+  }  
+
+  .imgheight{
+    height: 150px;
+  }
+
+  /* .btnbox{
+    display: flex;
+  } */
+
+  .loader {
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .spinner {
+    position: absolute;
+    margin-top: 500px;
+  }
+  .badge{
+    z-index: 1;
+  }
+
+  .start-100 {
+    left: 88%!important;
+}
+.myAlert{
+  position:absolute;
+  top: 70px;
+  width: 100%;
+}
+
+.abt{
+  position:absolute;
+  top: 70px;
+  width: 100%;
+  justify-content: center;
+
+}

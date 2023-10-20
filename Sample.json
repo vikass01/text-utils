@@ -1,0 +1,97 @@
+{
+  "status": "ok",
+  "totalResults": 1222,
+  "articles": [
+    {
+      "source": {
+        "id": "the-verge",
+        "name": "The Verge"
+      },
+      "author": "Emma Roth",
+      "title": "Threads will now let you search for posts",
+      "description": "Threads, the X competitor owned by Meta, is rolling out the ability to search through posts in English- and Spanish-speaking countries.",
+      "url": "https://www.theverge.com/2023/9/7/23863088/threads-rolling-out-support-search-posts",
+      "urlToImage": "https://cdn.vox-cdn.com/thumbor/YavtHu47GBXbFJeKLrxkZwo474E=/0x0:2040x1360/1200x628/filters:focal(1020x680:1021x681)/cdn.vox-cdn.com/uploads/chorus_asset/file/24774110/STK156_Instagram_threads_1.jpg",
+      "publishedAt": "2023-09-07T16:50:58Z",
+      "content": "Threads will now let you search for posts\r\nThreads will now let you search for posts\r\n / The Meta-owned X competitor is letting users in English- and Spanish-speaking countries search through posts.\r… [+1326 chars]"
+    },
+    {
+      "source": {
+        "id": "engadget",
+        "name": "Engadget"
+      },
+      "author": "Mariella Moon",
+      "title": "'Slack AI' will summarize your work chat starting this winter",
+      "description": "After introducing the generative AI capabilities it was developing for Slack at World Tour NYC earlier this year, Salesforce has revealed as part of its Dreamforce announcements that it's now gearing up to pilot the new features this winter. Slack AI, as the …",
+      "url": "https://www.engadget.com/slack-ai-will-summarize-your-work-chat-starting-this-winter-130046724.html",
+      "urlToImage": "https://s.yimg.com/ny/api/res/1.2/0nS4rOjzKNbMIM3AQNXG5w--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD03NjE-/https://s.yimg.com/os/creatr-uploaded-images/2023-09/6e637d00-4ca6-11ee-8f67-35e9d336fb63",
+      "publishedAt": "2023-09-06T13:00:46Z",
+      "content": "After introducing the generative AI capabilities it was developing for Slack at World Tour NYC earlier this year, Salesforce has revealed as part of its Dreamforce announcements that it's now gearing… [+1958 chars]"
+    },
+    {
+      "source": {
+        "id": "engadget",
+        "name": "Engadget"
+      },
+      "author": "Karissa Bell",
+      "title": "Meta is blocking ‘potentially sensitive’ topics from Threads search",
+      "description": "It turns out that Threads’ recently introduced keyword-searching abilities won’t work for all topics. The app is currently blocking searches for a number of “potentially sensitive” words, including “vaccines,” “covid,” and other variations of words that have …",
+      "url": "https://www.engadget.com/meta-is-blocking-potentially-sensitive-topics-from-threads-search-231028963.html",
+      "urlToImage": "https://s.yimg.com/ny/api/res/1.2/zzxOHRc7ApLsBVp7nHRaXg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://s.yimg.com/os/creatr-uploaded-images/2023-07/e4dc9d60-1c57-11ee-aa61-d9a3c985eaeb",
+      "publishedAt": "2023-09-11T23:10:28Z",
+      "content": "It turns out that Threads recently introduced keyword-searching abilities wont work for all topics. The app is currently blocking searches for a number of potentially sensitive words, including vacci… [+2880 chars]"
+    },
+    {
+      "source": {
+        "id": "wired",
+        "name": "Wired"
+      },
+      "author": "Megan Gray",
+      "title": "How Google Alters Search Queries to Get at Your Wallet",
+      "description": "Testimony during Google’s antitrust case revealed that the company may be altering billions of queries a day to generate search results that will get you to buy more stuff.",
+      "url": "https://www.wired.com/story/google-antitrust-lawsuit-search-results/",
+      "urlToImage": "https://media.wired.com/photos/65174858f302a7f0adc6db00/191:100/w_1280,c_limit/ideas_google_search_antitrust.jpg",
+      "publishedAt": "2023-10-02T12:00:00Z",
+      "content": "Recently, a startling piece of information came to light in the ongoing antitrust case against Google. During one employees testimony, a key exhibit momentarily flashed on a projector. In the mostly … [+3336 chars]"
+    },
+    {
+      "source": {
+        "id": "wired",
+        "name": "Wired"
+      },
+      "author": "Adrienne So",
+      "title": "How to Build Your Lego Collection Like a Lego Master (2023)",
+      "description": "You dream of a basement-wide cityscape, but you also have to pay rent. We asked Lego Master and brickfluencer Stacey Roy how to do it.",
+      "url": "https://www.wired.com/story/how-to-build-a-lego-collection/",
+      "urlToImage": "https://media.wired.com/photos/6504c76d3f0b6cf71150b744/191:100/w_1280,c_limit/How-to-Build-Your-Lego-Collection-Gear-GettyImages-900408694.jpg",
+      "publishedAt": "2023-09-16T11:00:00Z",
+      "content": "I dont remember when my family first acquired our first Lego bricks. Like awakening from a fever dream, I regained consciousness in the past few years and realized we now have a whole room dedicated … [+3679 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "9to5Mac"
+      },
+      "author": "Zac Hall",
+      "title": "Threads keyword search expands to ‘most English and Spanish speaking countries’",
+      "description": "Threads keyword search is “rolling out to most English and Spanish speaking countries today,” according to Meta boss Mark Zuckerberg. Basic search functionality brings Threads one step closer being a fully featured social network.\n\n\n\n more…",
+      "url": "https://9to5mac.com/2023/09/07/threads-keyword-search-english-spanish/",
+      "urlToImage": "https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2023/08/threads-search.webp?resize=1200%2C628&quality=82&strip=all&ssl=1",
+      "publishedAt": "2023-09-07T17:13:10Z",
+      "content": "Threads keyword search is “rolling out to most English and Spanish speaking countries today,” according to Meta boss Mark Zuckerberg. Basic search functionality brings Threads one step closer being a… [+1310 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Gizmodo.com"
+      },
+      "author": "Mack DeGeurin",
+      "title": "Threads Isn't Showing Search Results for 'Covid,' 'Vaccines,' or Other Sensitive Topics",
+      "description": "Meta is intentionally limiting search results on Threads for keywords related to the covid-19 virus and a variety of other potentially controversial topics. In a statement sent to Gizmodo, a spokesperson for the tech giant confirmed the “temporary” restrictio…",
+      "url": "https://gizmodo.com/instagram-threads-no-covid-vaccines-search-results-1850829880",
+      "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/594a8c145ce425f5bc6277467c69ec50.jpg",
+      "publishedAt": "2023-09-12T16:57:08Z",
+      "content": "Meta is intentionally limiting search results on Threads for keywords related to the covid-19 virus and a variety of other potentially controversial topics. In a statement sent to Gizmodo, a spokespe… [+4784 chars]"
+    }
+  ]
+}
