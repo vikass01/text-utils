@@ -95,13 +95,27 @@ export default function Project1(props) {
         setText(ev.target.value);
     }
 
+    function listen (){
+      const utterance = new SpeechSynthesisUtterance(text)
+      utterance.pitch = 1;
+      utterance.rate = 1;
+      utterance.volume = 1;
+      speechSynthesis.speak(utterance)
+      props.showAlert("Its Speaking...........")
+    }
+
+    function Stop(){
+      speechSynthesis.cancel();
+      props.showAlert("Speaking Stopped")
+    }
+
   return (
     <form id="form1" className='myAlert1' >
       <label htmlFor="exampleInputEmail1" className="form-label">Enter text here</label>
-      <div className="mb-3" style={{color:`${props.Pagemode === "light" ? "black": "white"}`, display:'flex', gap:10}}>
+      <div className="mb-3" style={{color:`${props.Pagemode === "light" ? "black": "white"}`, display:'flex', gap:10}} > 
         
-        <textarea type="text" style={{backgroundColor: `${props.Pagemode === "light" ? "white": "#505050"}`, borderColor:'#6c757d', width:'67%', color:`${props.Pagemode === "light" ? "black": "white"}`}} className="form-control" id="exampleInputEmail1" rows = "8" value = {text} onChange={onDataChange} onKeyDown={inputdata} spellCheck="false"/>
-        <div style={{display:"flex", flexDirection:'column', marginBottom:10, 
+        <textarea className='bhui' type="text" style={{backgroundColor: `${props.Pagemode === "light" ? "white": "#505050"}`, borderColor:'#6c757d', width:'67%', color:`${props.Pagemode === "light" ? "black": "white"}`}} className="form-control" id="exampleInputEmail1" rows = "8" value = {text} onChange={onDataChange} onKeyDown={inputdata} spellCheck="false"/>
+        <div className='bhui' style={{display:"flex", flexDirection:'column', marginBottom:10, 
       backgroundColor:'#6c757d', width:'20%', height:'100%', borderRadius:10, color:'#fff', padding:5, gap:12}}>
         <span style={{textAlign:'center'}}>Details:</span>
         <span>Total Sentences : <span>{senten}</span></span>
@@ -115,20 +129,21 @@ export default function Project1(props) {
     </div>
     <div id="emailHelp" className="form-text">We'll never share your data with anyone else.</div>
   <div style={{display:"flex", justifyContent:'start' ,flexWrap:'wrap',  marginBottom:10, 
-      borderRadius:10,  padding:5}}>
-  <button type="button" className="btn" style={{width:200, backgroundColor:'#6c757d'}} onClick={changeUpperCase}>UpperCase</button>
-  <button type="button" className="btn" style={{width:200, backgroundColor:'#6c757d'}} onClick={changeLowerCase}>LowerCase</button>
-  <button type="button" className="btn" style={{width:200, backgroundColor:'#6c757d'}} onClick={changeClear}>Clear</button>
-  <button type="button" className="btn" style={{width:200, backgroundColor:'#6c757d'}} onClick={changecopy}>Copy</button>
-  <button type="button" className="btn" style={{width:200, backgroundColor:'#6c757d'}} onClick={removeSpace}>Remove Extra Space</button>
-  <button type="button" className="btn" style={{width:200, backgroundColor:'#6c757d'}} onClick={changeReplace}>Replace-Text</button>
-  <button type="button" className="btn" style={{width:200, backgroundColor:'#6c757d'}} onClick={removeSpace}></button>
-  <button type="button" className="btn" style={{width:200, backgroundColor:'#6c757d'}} onClick={changeReplace}></button>
+      borderRadius:10,  padding:5, }} >
+  <button type="button" className="btn bhui" style={{width:200, backgroundColor:'#6c757d', color:'#fff'}} onClick={changeUpperCase}>UpperCase</button>
+  <button type="button" className="btn bhui" style={{width:200, backgroundColor:'#6c757d', color:'#fff'}} onClick={changeLowerCase}>LowerCase</button>
+  <button type="button" className="btn bhui" style={{width:200, backgroundColor:'#6c757d', color:'#fff'}} onClick={changeClear}>Clear</button>
+  <button type="button" className="btn bhui" style={{width:200, backgroundColor:'#6c757d', color:'#fff'}} onClick={changecopy}>Copy</button>
+  <button type="button" className="btn bhui" style={{width:200, backgroundColor:'#6c757d', color:'#fff'}} onClick={removeSpace}>Remove Extra Space</button>
+  <button type="button" className="btn bhui" style={{width:200, backgroundColor:'#6c757d', color:'#fff'}} onClick={changeReplace}>Replace-Text</button>
+  <button type="button" className="btn bhui" style={{width:200, backgroundColor:'#6c757d', color:'#fff'}} onClick={listen}>Listen Now</button>
+  <button type="button" className="btn bhui" style={{width:200, backgroundColor:'#6c757d', color:'#fff'}} onClick={Stop}>Listen Stop</button>
     <br/>
     <br/>
+    
   
   </div>
-  <p id='ptag'></p>
+  <p style={{textAlign:'center'}}> Project by Vikas Panchal,Opensourced for non-commercial purposes only.</p>
   </form>
   )
 }
