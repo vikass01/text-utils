@@ -1,9 +1,47 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Project1.css';
 
 
 export default function Project1(props) {
     const [text, setText] =useState("");
+    const [wcounts, setwcounts] = useState(0)
+    const [senten, setsenten] = useState(0)
+    const [char, setchar] = useState(0)
+    const [rtime, setrtime] = useState(0)
+    const [stime, setstime] = useState(0)
+    const [lines, setlines] = useState(0)
+
+    useEffect(()=>{
+      const newText = text.split(" ");
+      setwcounts(newText.length-1);
+
+      
+      const re = /[.!?]/;
+      const numOfSentences = text.split(re);
+      setsenten(numOfSentences.length - 1);
+        
+      setchar(text.length);
+
+      const wpm = 225;
+      const time = (wcounts / wpm);
+      setrtime(time.toFixed(2)  +' sec');
+
+      const speaktime = 140;
+      const estimate = wcounts / speaktime
+      setstime(estimate.toFixed(2)+ ' sec')
+
+
+      var table = document.getElementById("exampleInputEmail1");
+      var totalRowCount = table.ATTRIBUTE_NODE.rows;
+      // var tbodyRowCount = table.tBodies[0].rows.length;
+      setlines(totalRowCount);
+      
+
+
+      
+    },[text, wcounts])
+
+    
 
     function changeUpperCase(){
         const newText = text.toUpperCase();
@@ -16,6 +54,8 @@ export default function Project1(props) {
       setText(newText);
       props.showAlert("LowerCase Converted", "success")
     }
+
+
 
     function changeClear(){
       setText("")
@@ -30,49 +70,12 @@ export default function Project1(props) {
       props.showAlert("Text Copied", "success")
     }
 
-    function countChar(){
-      const pee = document.getElementById("ptag");
-      pee.innerText= "Characters Length is : "+text.length;
-      props.showAlert("Character Counting Completed", "success")
-    }
-
-    function changeCountWords(){
-      const pee = document.getElementById("ptag");
-      const newText = text.split(" ");
-      pee.innerText = newText.length;
-      props.showAlert("Word Count Completed", "success")
-    }
-
-    function countLines(){
-      const pee = document.getElementById("ptag");
-      const lines = text.split('\n'); 
-      pee.innerText = lines.length;
-      props.showAlert("Line Counting Completing", "success")
-    }
-
-    function getReadTime(){
-      const pee = document.getElementById("ptag");
-      const newText = text.split(" ");
-      pee.innerText = 0.5*newText.length+ " Sec";
-      props.showAlert("Time Fetched", "success")
-    }
-
     function removeSpace(){
       const newString = text.replace(/\s+/g,' ').trim();
       setText(newString);
       props.showAlert("Extra Space Removed", "success")
     }
 
-    function changeSort(){
-      const newtext = text.split( '\n');
-      setText(newtext.sort())
-      props.showAlert("Text Sorted", "success")
-    }
-
-    function changeSortRevers(){
-      // const newtext = text.split( '\n');
-      // setText(newtext.reverse())
-    }
 
     function changeReplace(){
       const x = prompt("Which Text you want to replace");
@@ -83,8 +86,8 @@ export default function Project1(props) {
 
     
     function inputdata(ev){
-      console.clear();
-      console.log(ev.keyCode);
+      // console.clear();
+      // console.log(ev.keyCode);
     }
 
 
@@ -94,27 +97,40 @@ export default function Project1(props) {
 
   return (
     <form id="form1" className='myAlert1' >
-      <div className="mb-3" style={{color:`${props.Pagemode === "light" ? "black": "white"}`}}>
-        <label htmlFor="exampleInputEmail1" className="form-label">Enter text here</label>
-        <textarea type="text" style={{backgroundColor: `${props.Pagemode === "light" ? "white": "#505050"}`, color:`${props.Pagemode === "light" ? "black": "white"}`}} className="form-control" id="exampleInputEmail1" rows = "8" value = {text} onChange={onDataChange} onKeyDown={inputdata} spellCheck="false"/>
-      <div id="emailHelp" className="form-text">We'll never share your data with anyone else.</div>
+      <label htmlFor="exampleInputEmail1" className="form-label">Enter text here</label>
+      <div className="mb-3" style={{color:`${props.Pagemode === "light" ? "black": "white"}`, display:'flex', gap:10}}>
+        
+        <textarea type="text" style={{backgroundColor: `${props.Pagemode === "light" ? "white": "#505050"}`, borderColor:'#6c757d', width:'67%', color:`${props.Pagemode === "light" ? "black": "white"}`}} className="form-control" id="exampleInputEmail1" rows = "8" value = {text} onChange={onDataChange} onKeyDown={inputdata} spellCheck="false"/>
+        <div style={{display:"flex", flexDirection:'column', marginBottom:10, 
+      backgroundColor:'#6c757d', width:'20%', height:'100%', borderRadius:10, color:'#fff', padding:5, gap:12}}>
+        <span style={{textAlign:'center'}}>Details:</span>
+        <span>Total Sentences : <span>{senten}</span></span>
+        <span>Read time : <span>{rtime}</span></span>
+        <span >Words : <span>{wcounts}</span></span>
+        <span>Characters : <span>{char}</span></span>
+        <span>Speaking Time : <span>{stime}</span></span>
+        <span>Rows : <span>{lines}</span></span>
+      </div>
+      
     </div>
+    <div id="emailHelp" className="form-text">We'll never share your data with anyone else.</div>
+  <div style={{display:"flex", justifyContent:'start' ,flexWrap:'wrap',  marginBottom:10, 
+      borderRadius:10,  padding:5}}>
+  <button type="button" className="btn" style={{width:200, backgroundColor:'#6c757d'}} onClick={changeUpperCase}>UpperCase</button>
+  <button type="button" className="btn" style={{width:200, backgroundColor:'#6c757d'}} onClick={changeLowerCase}>LowerCase</button>
+  <button type="button" className="btn" style={{width:200, backgroundColor:'#6c757d'}} onClick={changeClear}>Clear</button>
+  <button type="button" className="btn" style={{width:200, backgroundColor:'#6c757d'}} onClick={changecopy}>Copy</button>
+  <button type="button" className="btn" style={{width:200, backgroundColor:'#6c757d'}} onClick={removeSpace}>Remove Extra Space</button>
+  <button type="button" className="btn" style={{width:200, backgroundColor:'#6c757d'}} onClick={changeReplace}>Replace-Text</button>
+  <button type="button" className="btn" style={{width:200, backgroundColor:'#6c757d'}} onClick={removeSpace}></button>
+  <button type="button" className="btn" style={{width:200, backgroundColor:'#6c757d'}} onClick={changeReplace}></button>
+    <br/>
+    <br/>
   
-  <button type="button" className="btn btn-primary" onClick={changeUpperCase}>UpperCase</button>
-  <button type="button" className="btn btn-primary" onClick={changeLowerCase}>LowerCase</button>
-  <button type="button" className="btn btn-primary" onClick={changeClear}>Clear</button>
-  <button type="button" className="btn btn-primary" onClick={changecopy}>Copy</button>
-  <button type="button" className="btn btn-primary" onClick={countChar}>Count Characters</button>
-  <button type="button" className="btn btn-primary" onClick={changeCountWords}>Count Words</button>
-  <button type="button" className="btn btn-primary" onClick={countLines}>Count Lines</button>
-  <button type="button" className="btn btn-primary" onClick={getReadTime}>Get Reading Time</button>
-  <button type="button" className="btn btn-primary" onClick={removeSpace}>Remove Extra Space</button>
-  <button type="button" className="btn btn-primary" onClick={changeSort}>Sort</button>
-  <button type="button" className="btn btn-primary" onClick={changeSortRevers}>Sort-Reverse</button>
-  <button type="button" className="btn btn-primary" onClick={changeReplace}>Replace-Text</button>
-    <br/>
-    <br/>
+  </div>
   <p id='ptag'></p>
   </form>
   )
 }
+
+

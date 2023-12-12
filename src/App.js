@@ -3,8 +3,8 @@ import './App.css';
 import Alert from './components/Alert';
 import Navbar from './components/Navbar';
 import Project1 from './components/Project1';
-import About from './components/About';
-import Business from './components/Business';
+
+
 import React, {useState} from 'react';
 import {
   BrowserRouter as Router,
@@ -59,15 +59,10 @@ function App() {
     <Alert alert = {alert}/>
 
     <Routes>
-          			<Route exect path="/about" element={<About />} />
+          			
           			<Route exect path="/" element={<Project1 showAlert= {showAlert} Pagemode = {Mode}/>} />
-                <Route exect path="/business" element={<Business key="business" category = 'business'/>} />
-                <Route exect path="/entertainment" element={<Business key="entertainment" category = 'entertainment'/>} />
-                <Route exect path="/general" element={<Business key="general" category = 'general'/>} />
-                <Route exect path="/health" element={<Business key="health" category = 'health'/>} />
-                <Route exect path="/science" element={<Business key="science" category = 'science'/>} />
-                <Route exect path="/sports" element={<Business key="sports" category = 'sports'/>} />
-                <Route exect path="/technology" element={<Business key="technology" category = 'technology'/>} />               
+                
+                              
         		</Routes>
 
     </Router>
