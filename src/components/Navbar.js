@@ -25,33 +25,32 @@ export default function Navbar(props) {
       <button onClick={() => setProgress(100)}>Complete</button>
       <br /> */}
     </div>
-    <nav className={`navbar navbar-expand-lg fixed-top bg-body-dark navbar-${props.Pagemode} bg-${props.Pagemode}`} >
-    <div className="container-fluid">
-    <Link className="navbar-brand" to="/" style={{marginLeft:190, fontSize:24}}>Text-Utils</Link>
-    <div className="collapse navbar-collapse bbb" id="navbarSupportedContent">
-      <form className="d-flex" role="search" style={{position:'absolute', right:100 }}>
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit" style={{marginRight:30}}>Search</button>
-        <div className="form-check form-switch switchh" onClick={props.toggleMode}>
-          <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" aria-checked="true"/>
-          <label className={`form-check-label ${props.Pagemode === "light" ? "text-dark": "text-light"}`} htmlFor="flexSwitchCheckDisabled">DarkMode</label>
+    <div style={{display:'flex', justifyContent:'center', alignItems:'center', backgroundColor: `${props.Pagemode === "light" ? "#22577A" : "#ccc"}`}}  >
+    
+        {/* <div style={{backgroundColor:'green'}}>Text-Utils</div> */}
+        <div style={{display:'flex', justifyContent:'center', alignItems:'center'}} className="form-check form-switch switchh" onClick={props.toggleMode}>
+              <div style={{marginRight:60, position:'relative', top:4}}><h2 className={`${props.Pagemode === "light" ? "text-dark": "text-light"}`}>Text-Utils</h2></div>
+              <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" aria-checked="true"/>
+              <label className={`form-check-label ${props.Pagemode === "light" ? "text-dark": "text-light"}`} htmlFor="flexSwitchCheckDisabled"></label>
         </div>
-      </form>
-    </div>
-  </div>
-</nav>
+  
+</div>
     
     </>
   )
 }
 
-// Navbar.propTypes = {
-//     logoName : PropTypes.string,
-// }
 
-// Navbar.defaultProps = {
-//     logoName : "Vikas",
-//     about : "Dharra"
-// }
+const styles = {
+ 
+    display:"flex",
+    justifyContent:"space-evenly",
+    alignItems:'center',
+    backgroundColor:'yellow',
+    width:'80%',
+    height:'100%',
+
+  
+} 
 
 

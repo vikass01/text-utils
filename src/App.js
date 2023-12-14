@@ -60,7 +60,7 @@ function App() {
 
     <Routes>
           			
-          			<Route exect path="/" element={<Project1 showAlert= {showAlert} Pagemode = {Mode}/>} />
+          			<Route exect path="/" element={<Project1 showAlert= {showAlert} Pagemode = {Mode} toggleMode = {toggleMode}/>} />
                 
                               
         		</Routes>
