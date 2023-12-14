@@ -118,22 +118,33 @@ export default function Project1(props) {
           value={text} onChange={onDataChange} onKeyDown={inputdata} spellCheck="false" />
           <div className='bhui'>
             <span style={{ textAlign: 'center' }}>Details:</span>
-            <span className='bjio'>Total Sentences : <span className='bjio'>{senten}</span>Read time : <span>{rtime}</span></span>
-            <span className='bjio'>Words : <span className='bjio'>{wcounts}</span>Characters : <span>{char}</span></span>
-            <span className='bjio'>Speaking Time : <span className='bjio'>{stime}</span>Rows : <span>{lines}</span></span>
+            <div style={{backgroundColor:`${props.Pagemode === "light" ? "#FB3640" : "#505050"}`, display:'flex', justifyContent:'space-evenly',alignItems:'center', padding:5, borderRadius:10}}>
+              <div style={{width:'60%'}}>
+                <p className='bbnm'>Total Sentences : {senten}</p>
+                <p className='bbnm'>Read time : {rtime}</p>
+                <p className='bbnm'>Speak Time : {stime}</p>
+              </div>
+
+              <div style={{width:'40%'}}>
+                <p className='bbnm'>Words : {wcounts}</p>
+                <p className='bbnm'>Rows : {lines}</p>
+                <p className='bbnm'>Characters : {char}</p>
+              </div>
+            
+            </div>
             
           </div>
         </div>
         
             <div className='vnbjf' style={{backgroundColor: `${props.Pagemode === "light" ? "#FB3640" : "#ccc"}`}} >
-              <button type="button" className="btn" style={{width:150, backgroundColor:'#6c757d', color:'#fff'}} onClick={changeUpperCase}>UpperCase</button>
-              <button type="button" className="btn" style={{width:150, backgroundColor:'#6c757d', color:'#fff'}} onClick={changeLowerCase}>LowerCase</button>
-              <button type="button" className="btn" style={{width:150, backgroundColor:'#6c757d', color:'#fff'}} onClick={changeClear}>Clear</button>
-              <button type="button" className="btn" style={{width:150, backgroundColor:'#6c757d', color:'#fff'}} onClick={changecopy}>Copy</button>
-              <button type="button" className="btn" style={{width:150, backgroundColor:'#6c757d', color:'#fff'}} onClick={removeSpace}>Remove Space</button>
-              <button type="button" className="btn" style={{width:150, backgroundColor:'#6c757d', color:'#fff'}} onClick={changeReplace}>Replace-Text</button>
-              <button type="button" className="btn" style={{width:150, backgroundColor:'#6c757d', color:'#fff'}} onClick={listen}>Listen Now</button>
-              <button type="button" className="btn" style={{width:150, backgroundColor:'#6c757d', color:'#fff'}} onClick={Stop}>Listen Stop</button>
+              <button type="button" className="btn" style={{width:140, backgroundColor:'#6c757d', color:'#fff'}} onClick={changeUpperCase}>UpperCase</button>
+              <button type="button" className="btn" style={{width:140, backgroundColor:'#6c757d', color:'#fff'}} onClick={changeLowerCase}>LowerCase</button>
+              <button type="button" className="btn" style={{width:140, backgroundColor:'#6c757d', color:'#fff'}} onClick={changeClear}>Clear</button>
+              <button type="button" className="btn" style={{width:140, backgroundColor:'#6c757d', color:'#fff'}} onClick={changecopy}>Copy</button>
+              <button type="button" className="btn" style={{width:140, backgroundColor:'#6c757d', color:'#fff'}} onClick={removeSpace}>Remove Space</button>
+              <button type="button" className="btn" style={{width:140, backgroundColor:'#6c757d', color:'#fff'}} onClick={changeReplace}>Replace-Text</button>
+              <button type="button" className="btn" style={{width:140, backgroundColor:'#6c757d', color:'#fff'}} onClick={listen}>Listen Now</button>
+              <button type="button" className="btn" style={{width:140, backgroundColor:'#6c757d', color:'#fff'}} onClick={Stop}>Listen Stop</button>
             </div>
             <div id="emailHelp" className="form-text">
             <p style={{textAlign:'center'}}>We'll never share your data with anyone else.</p>
